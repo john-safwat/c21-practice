@@ -185,7 +185,8 @@ class _XoGameState extends State<XoGame> {
     seconds++;
     int min = seconds ~/ 60;
     int sec = seconds % 60;
-    time = "${min.toString().padLeft(2, "0")}:${sec.toString().padLeft(2, "0")}";
+    time =
+        "${min.toString().padLeft(2, "0")}:${sec.toString().padLeft(2, "0")}";
     setState(() {});
   }
 
