@@ -140,7 +140,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           content: '=',
                           flex: 3,
                           color: AppColors.lightBlue,
-                          onPress: _onEqualPress,
+                          onPress: _onEqualPressed,
                         ),
                       ],
                     ),
@@ -183,14 +183,14 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   void _onOperationPress(String operation) {
     if (this.operation != null) {
-      _onEqualPress("");
+      _onEqualPressed("");
     }
     this.operation = operation;
     result = "0";
     setState(() {});
   }
 
-  void _onEqualPress(String _) {
+  void _onEqualPressed(String _) {
     if (firstDigit == "") return;
     if (secondDigit == "") return;
     switch (operation) {
