@@ -198,6 +198,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         result = (double.parse(firstDigit) + double.parse(secondDigit))
             .toString();
         break;
+
       case "-":
         result = (double.parse(firstDigit) - double.parse(secondDigit))
             .toString();
