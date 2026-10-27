@@ -165,7 +165,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   void _onDigitPress(String digit) {
     if (operation == null) {
-      if(calculationResult == firstDigit && firstDigit != ""){
+      if (calculationResult == firstDigit && firstDigit != "") {
         firstDigit = "";
         result = "0";
       }
@@ -182,7 +182,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   }
 
   void _onOperationPress(String operation) {
-    if(this.operation != null){
+    if (this.operation != null) {
       _onEqualPress("");
     }
     this.operation = operation;
@@ -191,20 +191,24 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   }
 
   void _onEqualPress(String _) {
-    if(firstDigit == "") return;
-    if(secondDigit == "") return;
+    if (firstDigit == "") return;
+    if (secondDigit == "") return;
     switch (operation) {
       case "+":
-        result = (double.parse(firstDigit) + double.parse(secondDigit)).toString();
+        result = (double.parse(firstDigit) + double.parse(secondDigit))
+            .toString();
         break;
       case "-":
-        result = (double.parse(firstDigit) - double.parse(secondDigit)).toString();
+        result = (double.parse(firstDigit) - double.parse(secondDigit))
+            .toString();
         break;
       case "*":
-        result = (double.parse(firstDigit) * double.parse(secondDigit)).toString();
+        result = (double.parse(firstDigit) * double.parse(secondDigit))
+            .toString();
         break;
       case "/":
-        result = (double.parse(firstDigit) / double.parse(secondDigit)).toString();
+        result = (double.parse(firstDigit) / double.parse(secondDigit))
+            .toString();
         break;
     }
     calculationResult = result;
